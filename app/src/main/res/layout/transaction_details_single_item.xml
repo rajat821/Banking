@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="95dp"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/customer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            tools:text="From : Name of the customer" />
+
+        <TextView
+            android:id="@+id/trans_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customer_name"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:textSize="12sp"
+            tools:text="Reference Id : 785fd65d-896dvc-5ff" />
+
+        <TextView
+            android:id="@+id/dateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trans_id"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            tools:text="25/12/2020 15:56:25" />
+
+        <TextView
+            android:id="@+id/amountPaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:textColor="#43C826"
+            android:layout_marginBottom="20dp"
+            tools:text="+ Rs.10,500"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:textColor="#43C826"
+            android:layout_marginEnd="30dp"
+            tools:text="Credit"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".Activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/bank_name"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/head"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:id="@+id/bank_logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/bank"
+        android:layout_below="@id/bank_name"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginBottom="-50dp"
+        app:cardCornerRadius="50dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_view_customers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Customers"
+                android:textColor="@color/white"
+                android:background="#B388FF"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/paytone_one"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:paddingHorizontal="20dp"/>
+
+                <TextView
+                    android:id="@+id/company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alegreya_sc"
+                    android:text="The Sparks Foundation"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="60dp"
+                    android:textColor="#2979FF"/>
+
+            <TextView
+                android:id="@+id/intern_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreya_sc"
+                android:text="Designed By Rajat Kumar Chandra"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@id/company_name"
+                android:textSize="18sp"
+                android:textColor="#2979FF"/>
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</RelativeLayout>

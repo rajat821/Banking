@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    app:cardBackgroundColor="#DEEAFB"
+    android:layout_marginVertical="5dp"
+    app:cardCornerRadius="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/customer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:textSize="18sp"
+            android:textColor="#4F05FF"
+            tools:text="Name : Name of the customer" />
+
+        <TextView
+            android:id="@+id/account_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customer_name"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="#611FFF"
+            tools:text="Acc/No : XXXXXXX1523" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:paddingHorizontal="15dp"
+            android:textColor="@color/white"
+            android:background="#611FFF"
+            android:text="Send"
+            android:textAllCaps="false"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

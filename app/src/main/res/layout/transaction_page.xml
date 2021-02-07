@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DEEAFB"
+    tools:context=".Activity.TransactionPage">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_marginTop="-25dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="48dp"
+                android:src="@drawable/ic_back_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/paytone_one"
+                android:text="Money Transfer"
+                android:textColor="#7C4DFF"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/money"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:src="@drawable/money"
+                android:layout_below="@id/back_btn"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"/>
+
+            <LinearLayout
+                android:id="@+id/llayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/money"
+                android:layout_marginStart="15dp"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transferring From :"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/sender_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Name Of The Sender"
+                    android:textStyle="bold"
+                    android:textColor="#4607F8"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/sender_acc_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="1236456987232"
+                    android:textColor="#A484FF"
+                    android:layout_marginTop="2dp"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/money"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:layout_marginEnd="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transferring To :"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/receiver_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Name Of The Receiver"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textColor="#4607F8"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/receiver_acc_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="XXXXXXXXX8232"
+                    android:textColor="#A484FF"
+                    android:layout_marginTop="2dp"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_right"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/money"
+                android:layout_marginTop="40dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llayout"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Available Balance :  "
+                    android:textColor="#00C853"
+                    android:textSize="22sp"/>
+
+                <TextView
+                    android:id="@+id/balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Rs. 10,000"
+                    android:textStyle="bold"
+                    android:textColor="#00C853"
+                    android:textSize="22sp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter the amount you want to transfer :"
+                android:textSize="15sp"
+                android:textColor="#4607F8"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:hint="Amount"
+                app:errorEnabled="true"
+                android:id="@+id/amountInput">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/amountEditText"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:background="#4607F8"
+                android:text="Send"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAllCaps="false"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Banking</string>
+    <string name="view_transactions"><u>View Transactions</u></string>
+</resources>

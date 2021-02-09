@@ -7,6 +7,16 @@
     android:background="#DEEAFB"
     tools:context=".Activity.TransactionDetails">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Transaction Found"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:id="@+id/noTrans"
+        android:textSize="20sp"/>
+
     <RelativeLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -42,15 +52,18 @@
                 android:layout_height="wrap_content"
                 tools:text="Customer Name"
                 android:textColor="@color/white"
+                android:drawablePadding="4dp"
+                android:gravity="bottom"
                 android:fontFamily="@font/paytone_one"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_user" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Transaction Details"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/white"
-                android:fontFamily="@font/paytone_one"
                 android:textSize="15sp"/>
 
         </LinearLayout>

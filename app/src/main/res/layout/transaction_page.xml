@@ -7,6 +7,26 @@
     android:background="#DEEAFB"
     tools:context=".Activity.TransactionPage">
 
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:elevation="30dp"
+        android:visibility="gone">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/progress"
+            style="@style/SpinKitView.Large.FadingCircle"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/design_default_color_primary_dark" />
+
+
+    </RelativeLayout>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -41,19 +61,19 @@
                 android:id="@+id/money"
                 android:layout_width="120dp"
                 android:layout_height="100dp"
-                android:src="@drawable/money"
                 android:layout_below="@id/back_btn"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
-                android:layout_centerHorizontal="true"/>
+                android:src="@drawable/money" />
 
             <LinearLayout
                 android:id="@+id/llayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/money"
-                android:layout_marginStart="15dp"
-                android:orientation="vertical"
-                android:layout_marginTop="30dp">
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -66,20 +86,26 @@
                     android:id="@+id/sender_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Name Of The Sender"
-                    android:textStyle="bold"
-                    android:textColor="#4607F8"
                     android:layout_marginTop="5dp"
-                    android:textSize="15sp" />
+                    android:drawablePadding="2dp"
+                    android:gravity="bottom"
+                    android:textColor="#4607F8"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_transfer_user"
+                    tools:text="Name Of The Sender" />
 
                 <TextView
                     android:id="@+id/sender_acc_no"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="1236456987232"
-                    android:textColor="#A484FF"
                     android:layout_marginTop="2dp"
-                    android:textSize="15sp" />
+                    android:drawablePadding="4dp"
+                    android:gravity="bottom"
+                    android:textColor="#A484FF"
+                    android:textSize="15sp"
+                    app:drawableStartCompat="@drawable/ic_transfer_acc"
+                    tools:text="1236456987232" />
 
             </LinearLayout>
 
@@ -89,8 +115,8 @@
                 android:layout_below="@id/money"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="30dp"
-                android:orientation="vertical"
-                android:layout_marginEnd="15dp">
+                android:layout_marginEnd="18dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -103,53 +129,59 @@
                     android:id="@+id/receiver_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Name Of The Receiver"
                     android:layout_marginTop="5dp"
-                    android:textStyle="bold"
+                    android:drawablePadding="2dp"
+                    android:gravity="bottom"
                     android:textColor="#4607F8"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_transfer_user"
+                    tools:text="Name Of The Receiver" />
 
                 <TextView
                     android:id="@+id/receiver_acc_no"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="XXXXXXXXX8232"
-                    android:textColor="#A484FF"
                     android:layout_marginTop="2dp"
-                    android:textSize="15sp" />
+                    android:drawablePadding="4dp"
+                    android:gravity="bottom"
+                    android:textColor="#A484FF"
+                    android:textSize="15sp"
+                    app:drawableStartCompat="@drawable/ic_transfer_acc"
+                    tools:text="XXXXXXXXX8232" />
 
             </LinearLayout>
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_right"
-                android:layout_centerHorizontal="true"
                 android:layout_below="@id/money"
-                android:layout_marginTop="40dp"/>
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic_right" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/llayout"
-                android:layout_marginTop="30dp"
-                android:layout_centerHorizontal="true">
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Available Balance :  "
                     android:textColor="#00C853"
-                    android:textSize="22sp"/>
+                    android:textSize="22sp" />
 
                 <TextView
                     android:id="@+id/balance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Rs. 10,000"
-                    android:textStyle="bold"
                     android:textColor="#00C853"
-                    android:textSize="22sp"/>
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    tools:text="Rs. 10,000" />
 
             </LinearLayout>
 
@@ -164,44 +196,44 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_centerInParent="true"
             android:gravity="center_horizontal"
-            android:layout_centerInParent="true">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Enter the amount you want to transfer :"
-                android:textSize="15sp"
-                android:textColor="#4607F8"/>
+                android:textColor="#4607F8"
+                android:textSize="20sp" />
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/amountInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:ems="10"
                 android:hint="Amount"
-                app:errorEnabled="true"
-                android:id="@+id/amountInput">
+                app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amountEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:id="@+id/amountEditText"/>
+                    android:inputType="numberDecimal" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btn_send"
-                android:layout_width="200dp"
+                android:layout_width="220dp"
                 android:layout_height="40dp"
+                android:layout_marginTop="20dp"
                 android:background="#4607F8"
                 android:text="Send"
-                android:layout_marginTop="20dp"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textAllCaps="false"/>
+                android:textSize="20sp" />
 
 
         </LinearLayout>

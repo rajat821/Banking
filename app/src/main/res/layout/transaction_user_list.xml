@@ -14,6 +14,7 @@
         android:background="#7C4DFF">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/back_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -39,17 +40,18 @@
                 android:id="@+id/customer_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Customer Name"
+                tools:text="Customer Name"
+                android:drawablePadding="6dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/paytone_one"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_user" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Transferring to"
                 android:textColor="@color/white"
-                android:fontFamily="@font/paytone_one"
                 android:textSize="15sp"/>
 
         </LinearLayout>

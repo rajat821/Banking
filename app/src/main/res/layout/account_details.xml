@@ -10,7 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="455dp"
         app:cardCornerRadius="10dp"
+        android:transitionName="cardAnim"
         app:cardBackgroundColor="#DEEAFB"
+        android:layout_marginHorizontal="5dp"
+        app:cardElevation="20dp"
         android:layout_centerInParent="true">
 
         <RelativeLayout
@@ -18,7 +21,7 @@
             android:layout_height="match_parent">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/back_button"
+                android:id="@+id/back_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="30dp"
@@ -50,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="Acc/No :  12036547893"
-                android:layout_below="@+id/back_button"
+                android:layout_below="@+id/back_btn"
                 android:textColor="#611FFF"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="40dp"

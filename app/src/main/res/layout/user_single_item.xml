@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="130dp"
     app:cardBackgroundColor="#DEEAFB"
+    android:id="@+id/card"
     android:layout_margin="5dp"
     android:padding="5dp"
     app:cardElevation="10dp"
+    android:transitionName="cardAnim"
     app:cardCornerRadius="10dp">
 
     <RelativeLayout
@@ -41,8 +43,8 @@
             android:layout_below="@id/customer_name"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="21dp"
             android:textColor="@color/black"
             android:textSize="18sp"
             tools:text="Rs. 10,000" />

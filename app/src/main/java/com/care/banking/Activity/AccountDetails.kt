@@ -67,6 +67,7 @@ class AccountDetails : AppCompatActivity() {
             intent.putExtra("accNo",accNo)
             intent.putExtra("customer",customer)
             startActivity(intent)
+            overridePendingTransition(R.anim.zoom,R.anim.static_animation)
         }
 
         findViewById<TextView>(R.id.viewTransaction).setOnClickListener {
@@ -74,7 +75,13 @@ class AccountDetails : AppCompatActivity() {
             intent.putExtra("accNo",accNo)
             intent.putExtra("customer",customer)
             startActivity(intent)
+            overridePendingTransition(R.anim.zoom,R.anim.static_animation)
         }
 
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.static_animation,R.anim.zoom_out)
     }
 }

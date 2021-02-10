@@ -1,6 +1,7 @@
 package com.care.banking.Adapter
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -41,6 +42,7 @@ class TrasactionUserAdapter(val context: Context, private val userList : ArrayLi
             intent.putExtra("senderAccNo",senderAccNo)
             intent.putExtra("receiverAccNo",user.accNo)
             context.startActivity(intent)
+            (context as Activity).overridePendingTransition(R.anim.zoom,R.anim.static_animation)
         }
     }
 

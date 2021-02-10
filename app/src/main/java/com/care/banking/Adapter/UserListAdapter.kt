@@ -59,6 +59,7 @@ class UserListAdapter(val context: Context, private val userList:ArrayList<Users
             intent.putExtra("accNo",user.accNo)
             intent.putExtra("customer",user.customerName)
             context.startActivity(intent)
+            (context as Activity).overridePendingTransition(R.anim.zoom,R.anim.static_animation)
         }
     }
 

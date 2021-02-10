@@ -44,7 +44,7 @@ class TransactionPage : AppCompatActivity() {
         layout = findViewById(R.id.layout)
         progress = findViewById(R.id.progress)
         val fdCircle: Sprite = FadingCircle()
-        progress.setIndeterminateDrawable(fdCircle)
+        progress.indeterminateDrawable = fdCircle
         var senderAccNo : Long? = null
         var receiverAccNo : Long? = null
         var senderName : String? = null
@@ -137,7 +137,9 @@ class TransactionPage : AppCompatActivity() {
                                         senderAmount.text = "- ${formatter.format(amount)}"
                                         doneBtn.setOnClickListener {
                                             val intent= Intent(this,MainActivity::class.java)
+                                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                                             startActivity(intent)
+                                            overridePendingTransition(R.anim.zoom,R.anim.static_animation)
                                             finish()
                                         }
                                         customDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
@@ -169,7 +171,9 @@ class TransactionPage : AppCompatActivity() {
         dialog.setMessage("Do you want to cancel the transaction?")
         dialog.setPositiveButton("Yes") { text, which ->
             val intent= Intent(this,MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
+            overridePendingTransition(R.anim.zoom,R.anim.static_animation)
             finish()
         }
         dialog.setNegativeButton("No"){text,which ->

@@ -60,4 +60,9 @@ class TransactionUserList : AppCompatActivity() {
             onBackPressed()
         }
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.static_animation,R.anim.zoom_out)
+    }
 }
